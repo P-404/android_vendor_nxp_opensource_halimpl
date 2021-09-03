@@ -1,3 +1,4 @@
+ifeq ($(strip $(TARGET_USES_NQ_NFC)),true)
 # Enable build support for NFC open source vendor modules
 ifeq ($(call is-board-platform-in-list, sdm845 sdm710 msmnile $(MSMSTEPPE) $(TRINKET) kona lito bengal atoll lahaina holi monaco),true)
 TARGET_USES_NQ_NFC := true
@@ -28,4 +29,4 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += $(NQ_VENDOR_NFC)
 endif
-
+endif
